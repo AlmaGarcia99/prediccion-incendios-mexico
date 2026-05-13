@@ -10,3 +10,8 @@ streamlit-folium
 plotly
 jupyter
 ipykernel
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
