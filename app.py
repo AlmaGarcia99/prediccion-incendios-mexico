@@ -9,8 +9,17 @@ import gdown
 # =========================
 
 if not os.path.exists("modelo_incendios.pkl"):
-    url = "https://drive.google.com/uc?id=1tH7dXUOvnfrp9e9taGn2zsroAyEDk9Il"
-    gdown.download(url, "modelo_incendios.pkl", quiet=False)
+   
+    file_id = "1tH7dXUOvnfrp9e9taGn2zsroAyEDk9Il"
+
+    url = f"https://drive.google.com/uc?id={file_id}"
+
+    gdown.download(
+    url,
+    "modelo_incendios.pkl",
+    quiet=False,
+    fuzzy=True
+)
 
 # =========================
 # CARGAR MODELO
