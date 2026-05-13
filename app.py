@@ -33,12 +33,15 @@ columnas = joblib.load("columnas_modelo.pkl")
 # =========================
 # TITULO
 # =========================
-col1, col2, col3 = st.columns(3)
-col1.metric("Incendios analizados", "71,000+")
-col2.metric("Categorías predichas", "6")
-col3.metric("Estados monitoreados", "32")
-col2.metric("Precisión balanceada", "54%")
-col2.metric("Modelo IA", "Random Forest")
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric("Incendios", "71,000+")
+col2.metric("Categorías", "6")
+col3.metric("Estados", "32")
+col4.metric("Modelo IA", "Random Forest")
+
+st.caption("Modelo balanceado con precisión aproximada del 54% usando Random Forest.")
+
 st.title("Predicción de Incendios Forestales en México")
 
 st.write("""
