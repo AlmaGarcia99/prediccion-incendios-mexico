@@ -20,6 +20,7 @@ modelo = joblib.load("modelo_incendios.pkl")
 columnas = joblib.load("columnas_modelo.pkl")
 
 
+
 # =========================
 # TITULO
 # =========================
@@ -102,7 +103,7 @@ llegada = st.number_input(
 # CREAR INPUT
 # =========================
 
-input_data = pd.DataFrame(columns=columnas_modelo)
+input_data = pd.DataFrame(columns=columnas)
 input_data.loc[0] = 0
 
 # Variables numéricas
