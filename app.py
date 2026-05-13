@@ -54,20 +54,15 @@ la severidad esperada de incendios forestales.
 # =========================
 
 st.header("Ingresa datos del incendio")
+estados = sorted([
+    col.replace('Estado_', '')
+    for col in columnas
+    if 'Estado_' in col
+])
 
-estado = st.selectbox(
-    "Estado",
-    [
-        "Jalisco",
-        "México",
-        "Chiapas",
-        "Chihuahua",
-        "Durango",
-        "Oaxaca",
-        "Guerrero",
-        "Michoacán"
-    ]
-)
+estado = st.selectbox("Estado", estados)
+
+
 
 causa = st.selectbox(
     "Causa",
