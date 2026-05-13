@@ -1,13 +1,23 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
+import gdown
+
+# =========================
+# DESCARGAR MODELO DESDE DRIVE
+# =========================
+
+if not os.path.exists("modelo_incendios.pkl"):
+    url = "https://drive.google.com/uc?id=1tH7dXUOvnfrp9e9taGn2zsroAyEDk9Il"
+    gdown.download(url, "modelo_incendios.pkl", quiet=False)
 
 # =========================
 # CARGAR MODELO
 # =========================
 
-modelo = joblib.load('modelo_incendios.pkl')
-columnas_modelo = joblib.load('columnas_modelo.pkl')
+modelo = joblib.load("modelo_incendios.pkl")
+columnas = joblib.load("columnas_modelo.pkl")
 
 
 # =========================
