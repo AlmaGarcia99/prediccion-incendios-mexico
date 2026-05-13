@@ -6,8 +6,8 @@ import joblib
 # CARGAR MODELO
 # =========================
 
-modelo = joblib.load('modelos/modelo_incendios.pkl')
-columnas_modelo = joblib.load('modelos/columnas_modelo.pkl')
+modelo = joblib.load('modelo_incendios.pkl')
+columnas_modelo = joblib.load('columnas_modelo.pkl')
 
 
 # =========================
